@@ -1,0 +1,2 @@
+# Ignoring the generated html documentation from percentage of languages used in project
+WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/ linguist:ignore

@@ -1,0 +1,87 @@
+{
+  "api/WorkoutTracker.Components.App.html": {
+    "href": "api/WorkoutTracker.Components.App.html",
+    "title": "Class App | WorkoutTracker",
+    "keywords": "Class App Namespace WorkoutTracker.Components Assembly WorkoutTracker.dll public class App : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase App Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html": {
+    "href": "api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html",
+    "title": "Class SimpleAuthenticationStateProvider | WorkoutTracker",
+    "keywords": "Class SimpleAuthenticationStateProvider Namespace WorkoutTracker.Components.Authentication Assembly WorkoutTracker.dll Provides a simple authentication state provider for managing user authentication state. public class SimpleAuthenticationStateProvider : AuthenticationStateProvider Inheritance object AuthenticationStateProvider SimpleAuthenticationStateProvider Inherited Members AuthenticationStateProvider.NotifyAuthenticationStateChanged(Task<AuthenticationState>) AuthenticationStateProvider.AuthenticationStateChanged object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetAuthenticationStateAsync() Gets the current authentication state asynchronously. public override Task<AuthenticationState> GetAuthenticationStateAsync() Returns Task<AuthenticationState> A task that represents the asynchronous operation. The task result contains the AuthenticationState. Login(string, string) Logs in a user with the specified username and password. public Task Login(string username, string password) Parameters username string The username of the user. password string The password of the user. Returns Task A task that represents the asynchronous operation. Logout() Logs out the current user. public Task Logout() Returns Task A task that represents the asynchronous operation."
+  },
+  "api/WorkoutTracker.Components.Authentication.html": {
+    "href": "api/WorkoutTracker.Components.Authentication.html",
+    "title": "Namespace WorkoutTracker.Components.Authentication | WorkoutTracker",
+    "keywords": "Namespace WorkoutTracker.Components.Authentication Classes SimpleAuthenticationStateProvider Provides a simple authentication state provider for managing user authentication state."
+  },
+  "api/WorkoutTracker.Components.Layout.MainLayout.html": {
+    "href": "api/WorkoutTracker.Components.Layout.MainLayout.html",
+    "title": "Class MainLayout | WorkoutTracker",
+    "keywords": "Class MainLayout Namespace WorkoutTracker.Components.Layout Assembly WorkoutTracker.dll public class MainLayout : LayoutComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase LayoutComponentBase MainLayout Implements IComponent IHandleEvent IHandleAfterRender Inherited Members LayoutComponentBase.SetParametersAsync(ParameterView) LayoutComponentBase.Body ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components.Layout.NavMenu.html": {
+    "href": "api/WorkoutTracker.Components.Layout.NavMenu.html",
+    "title": "Class NavMenu | WorkoutTracker",
+    "keywords": "Class NavMenu Namespace WorkoutTracker.Components.Layout Assembly WorkoutTracker.dll public class NavMenu : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase NavMenu Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components.Layout.html": {
+    "href": "api/WorkoutTracker.Components.Layout.html",
+    "title": "Namespace WorkoutTracker.Components.Layout | WorkoutTracker",
+    "keywords": "Namespace WorkoutTracker.Components.Layout Classes MainLayout NavMenu"
+  },
+  "api/WorkoutTracker.Components.Pages.Counter.html": {
+    "href": "api/WorkoutTracker.Components.Pages.Counter.html",
+    "title": "Class Counter | WorkoutTracker",
+    "keywords": "Class Counter Namespace WorkoutTracker.Components.Pages Assembly WorkoutTracker.dll [Route(\"/counter\")] public class Counter : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase Counter Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components.Pages.Error.html": {
+    "href": "api/WorkoutTracker.Components.Pages.Error.html",
+    "title": "Class Error | WorkoutTracker",
+    "keywords": "Class Error Namespace WorkoutTracker.Components.Pages Assembly WorkoutTracker.dll [Route(\"/Error\")] public class Error : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase Error Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder OnInitialized() Method invoked when the component is ready to start, having received its initial parameters from its parent in the render tree. protected override void OnInitialized()"
+  },
+  "api/WorkoutTracker.Components.Pages.Home.html": {
+    "href": "api/WorkoutTracker.Components.Pages.Home.html",
+    "title": "Class Home | WorkoutTracker",
+    "keywords": "Class Home Namespace WorkoutTracker.Components.Pages Assembly WorkoutTracker.dll [Route(\"/\")] public class Home : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase Home Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components.Pages.Weather.html": {
+    "href": "api/WorkoutTracker.Components.Pages.Weather.html",
+    "title": "Class Weather | WorkoutTracker",
+    "keywords": "Class Weather Namespace WorkoutTracker.Components.Pages Assembly WorkoutTracker.dll [StreamRendering(true)] [Route(\"/weather\")] public class Weather : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase Weather Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder OnInitializedAsync() Method invoked when the component is ready to start, having received its initial parameters from its parent in the render tree. Override this method if you will perform an asynchronous operation and want the component to refresh when that operation is completed. protected override Task OnInitializedAsync() Returns Task A Task representing any asynchronous operation."
+  },
+  "api/WorkoutTracker.Components.Pages.html": {
+    "href": "api/WorkoutTracker.Components.Pages.html",
+    "title": "Namespace WorkoutTracker.Components.Pages | WorkoutTracker",
+    "keywords": "Namespace WorkoutTracker.Components.Pages Classes Counter Error Home Weather"
+  },
+  "api/WorkoutTracker.Components.Routes.html": {
+    "href": "api/WorkoutTracker.Components.Routes.html",
+    "title": "Class Routes | WorkoutTracker",
+    "keywords": "Class Routes Namespace WorkoutTracker.Components Assembly WorkoutTracker.dll public class Routes : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase Routes Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components._Imports.html": {
+    "href": "api/WorkoutTracker.Components._Imports.html",
+    "title": "Class _Imports | WorkoutTracker",
+    "keywords": "Class _Imports Namespace WorkoutTracker.Components Assembly WorkoutTracker.dll public class _Imports : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender Inheritance object ComponentBase _Imports Implements IComponent IHandleEvent IHandleAfterRender Inherited Members ComponentBase.OnInitialized() ComponentBase.OnInitializedAsync() ComponentBase.OnParametersSet() ComponentBase.OnParametersSetAsync() ComponentBase.StateHasChanged() ComponentBase.ShouldRender() ComponentBase.OnAfterRender(bool) ComponentBase.OnAfterRenderAsync(bool) ComponentBase.InvokeAsync(Action) ComponentBase.InvokeAsync(Func<Task>) ComponentBase.DispatchExceptionAsync(Exception) ComponentBase.SetParametersAsync(ParameterView) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods BuildRenderTree(RenderTreeBuilder) Renders the component to the supplied RenderTreeBuilder. protected override void BuildRenderTree(RenderTreeBuilder __builder) Parameters __builder RenderTreeBuilder"
+  },
+  "api/WorkoutTracker.Components.html": {
+    "href": "api/WorkoutTracker.Components.html",
+    "title": "Namespace WorkoutTracker.Components | WorkoutTracker",
+    "keywords": "Namespace WorkoutTracker.Components Classes App Routes _Imports"
+  },
+  "autodocs/getting-started.html": {
+    "href": "autodocs/getting-started.html",
+    "title": "Getting Started | WorkoutTracker",
+    "keywords": "Getting Started"
+  },
+  "autodocs/introduction.html": {
+    "href": "autodocs/introduction.html",
+    "title": "Introduction | WorkoutTracker",
+    "keywords": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | WorkoutTracker",
+    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

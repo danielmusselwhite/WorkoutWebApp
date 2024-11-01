@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorkoutTracker.Components.Pages
+  commentId: N:WorkoutTracker.Components.Pages
+  id: WorkoutTracker.Components.Pages
+  children:
+  - WorkoutTracker.Components.Pages.Counter
+  - WorkoutTracker.Components.Pages.Error
+  - WorkoutTracker.Components.Pages.Home
+  - WorkoutTracker.Components.Pages.Weather
+  langs:
+  - csharp
+  - vb
+  name: WorkoutTracker.Components.Pages
+  nameWithType: WorkoutTracker.Components.Pages
+  fullName: WorkoutTracker.Components.Pages
+  type: Namespace
+  assemblies:
+  - WorkoutTracker
+references:
+- uid: WorkoutTracker.Components.Pages.Home
+  commentId: T:WorkoutTracker.Components.Pages.Home
+  href: WorkoutTracker.Components.Pages.Home.html
+  name: Home
+  nameWithType: Home
+  fullName: WorkoutTracker.Components.Pages.Home
+- uid: WorkoutTracker.Components.Pages.Weather
+  commentId: T:WorkoutTracker.Components.Pages.Weather
+  href: WorkoutTracker.Components.Pages.Weather.html
+  name: Weather
+  nameWithType: Weather
+  fullName: WorkoutTracker.Components.Pages.Weather
+- uid: WorkoutTracker.Components.Pages.Counter
+  commentId: T:WorkoutTracker.Components.Pages.Counter
+  href: WorkoutTracker.Components.Pages.Counter.html
+  name: Counter
+  nameWithType: Counter
+  fullName: WorkoutTracker.Components.Pages.Counter
+- uid: WorkoutTracker.Components.Pages.Error
+  commentId: T:WorkoutTracker.Components.Pages.Error
+  href: WorkoutTracker.Components.Pages.Error.html
+  name: Error
+  nameWithType: Error
+  fullName: WorkoutTracker.Components.Pages.Error

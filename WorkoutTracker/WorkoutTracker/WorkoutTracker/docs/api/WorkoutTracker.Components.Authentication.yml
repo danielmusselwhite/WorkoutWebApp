@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorkoutTracker.Components.Authentication
+  commentId: N:WorkoutTracker.Components.Authentication
+  id: WorkoutTracker.Components.Authentication
+  children:
+  - WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
+  langs:
+  - csharp
+  - vb
+  name: WorkoutTracker.Components.Authentication
+  nameWithType: WorkoutTracker.Components.Authentication
+  fullName: WorkoutTracker.Components.Authentication
+  type: Namespace
+  assemblies:
+  - WorkoutTracker
+references:
+- uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
+  commentId: T:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
+  href: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html
+  name: SimpleAuthenticationStateProvider
+  nameWithType: SimpleAuthenticationStateProvider
+  fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider

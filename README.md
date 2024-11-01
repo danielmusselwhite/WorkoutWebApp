@@ -2,6 +2,15 @@
 
 ## Technical Documentation
 
+### Code Documentation
+
+- Navigate to `.\WorkoutTracker\docs`
+- Launch PowerShell Window
+- Optional run `docfx docfx.json`
+    - (only necessary if you have made changes to the docstrings and/or files)
+- Run `docfx serve _site`
+- Open `http://localhost:8080` in your browser
+
 ### Simple Class Diagram
 
 ![Class Diagram](./docs/images/WorkOuts.drawio.png)

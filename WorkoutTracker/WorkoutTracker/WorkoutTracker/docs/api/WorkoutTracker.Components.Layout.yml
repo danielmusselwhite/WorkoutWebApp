@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorkoutTracker.Components.Layout
+  commentId: N:WorkoutTracker.Components.Layout
+  id: WorkoutTracker.Components.Layout
+  children:
+  - WorkoutTracker.Components.Layout.MainLayout
+  - WorkoutTracker.Components.Layout.NavMenu
+  langs:
+  - csharp
+  - vb
+  name: WorkoutTracker.Components.Layout
+  nameWithType: WorkoutTracker.Components.Layout
+  fullName: WorkoutTracker.Components.Layout
+  type: Namespace
+  assemblies:
+  - WorkoutTracker
+references:
+- uid: WorkoutTracker.Components.Layout.MainLayout
+  commentId: T:WorkoutTracker.Components.Layout.MainLayout
+  href: WorkoutTracker.Components.Layout.MainLayout.html
+  name: MainLayout
+  nameWithType: MainLayout
+  fullName: WorkoutTracker.Components.Layout.MainLayout
+- uid: WorkoutTracker.Components.Layout.NavMenu
+  commentId: T:WorkoutTracker.Components.Layout.NavMenu
+  href: WorkoutTracker.Components.Layout.NavMenu.html
+  name: NavMenu
+  nameWithType: NavMenu
+  fullName: WorkoutTracker.Components.Layout.NavMenu
