@@ -1,4 +1,45 @@
-﻿<Router AppAssembly="typeof(Program).Assembly">
+﻿@using WorkoutTracker.Components.Authentication
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject SimpleAuthenticationStateProvider AuthStateProvider
+
+@code {
+    /// <summary>
+    /// Initializes the component and checks the authentication state.
+    /// If the user is not on the login page and is not authenticated,
+    /// they will be redirected to the login page.
+    /// </summary>
+    protected override async Task OnInitializedAsync()
+    {
+
+        // If user is not on login page
+        if (!Navigation.Uri.Contains("login"))
+        {
+            // Redirect to the login page if not authenticated
+            System.Diagnostics.Debug.Print("Checking Authenitication State From Routes");
+            bool isAuthenticated = await AuthStateProvider.IsAuthenticated();
+            if (!isAuthenticated)
+            {
+                Navigation.NavigateTo("/login");
+            }
+        }
+
+        // If the user on the login page
+        else
+        {
+            // Redirect to the home page if already authenticated
+            System.Diagnostics.Debug.Print("Checking Authenitication State From Routes");
+            bool isAuthenticated = await AuthStateProvider.IsAuthenticated();
+            if (isAuthenticated)
+            {
+                Navigation.NavigateTo("/");
+            }
+        }
+        
+    }
+}
+
+<Router AppAssembly="typeof(Program).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
         <FocusOnNavigate RouteData="routeData" Selector="h1" />

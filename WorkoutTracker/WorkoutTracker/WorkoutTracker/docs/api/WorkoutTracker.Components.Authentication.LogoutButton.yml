@@ -1,41 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: WorkoutTracker.Components.Routes
-  commentId: T:WorkoutTracker.Components.Routes
-  id: Routes
-  parent: WorkoutTracker.Components
+- uid: WorkoutTracker.Components.Authentication.LogoutButton
+  commentId: T:WorkoutTracker.Components.Authentication.LogoutButton
+  id: LogoutButton
+  parent: WorkoutTracker.Components.Authentication
   children:
-  - WorkoutTracker.Components.Routes.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  - WorkoutTracker.Components.Routes.OnInitializedAsync
+  - WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   langs:
   - csharp
   - vb
-  name: Routes
-  nameWithType: Routes
-  fullName: WorkoutTracker.Components.Routes
+  name: LogoutButton
+  nameWithType: LogoutButton
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton
   type: Class
   source:
-    id: Routes
-    path: Microsoft.CodeAnalysis.Razor.Compiler\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Components_Routes_razor.g.cs
-    startLine: 80
+    id: LogoutButton
+    path: Microsoft.CodeAnalysis.Razor.Compiler\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Components_Authentication_LogoutButton_razor.g.cs
+    startLine: 73
   assemblies:
   - WorkoutTracker
-  namespace: WorkoutTracker.Components
+  namespace: WorkoutTracker.Components.Authentication
   syntax:
-    content: 'public class Routes : LayoutComponentBase, IComponent, IHandleEvent, IHandleAfterRender'
-    content.vb: Public Class Routes Inherits LayoutComponentBase Implements IComponent, IHandleEvent, IHandleAfterRender
+    content: 'public class LogoutButton : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender'
+    content.vb: Public Class LogoutButton Inherits ComponentBase Implements IComponent, IHandleEvent, IHandleAfterRender
   inheritance:
   - System.Object
   - Microsoft.AspNetCore.Components.ComponentBase
-  - Microsoft.AspNetCore.Components.LayoutComponentBase
   implements:
   - Microsoft.AspNetCore.Components.IComponent
   - Microsoft.AspNetCore.Components.IHandleEvent
   - Microsoft.AspNetCore.Components.IHandleAfterRender
   inheritedMembers:
-  - Microsoft.AspNetCore.Components.LayoutComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  - Microsoft.AspNetCore.Components.LayoutComponentBase.Body
   - Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
+  - Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
   - Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
   - Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync
   - Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged
@@ -45,6 +42,7 @@ items:
   - Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
   - Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func{System.Threading.Tasks.Task})
   - Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+  - Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -52,24 +50,24 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: WorkoutTracker.Components.Routes.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  commentId: M:WorkoutTracker.Components.Routes.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+- uid: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  commentId: M:WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   id: BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  parent: WorkoutTracker.Components.Routes
+  parent: WorkoutTracker.Components.Authentication.LogoutButton
   langs:
   - csharp
   - vb
   name: BuildRenderTree(RenderTreeBuilder)
-  nameWithType: Routes.BuildRenderTree(RenderTreeBuilder)
-  fullName: WorkoutTracker.Components.Routes.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: LogoutButton.BuildRenderTree(RenderTreeBuilder)
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   type: Method
   source:
     id: BuildRenderTree
-    path: Microsoft.CodeAnalysis.Razor.Compiler\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Components_Routes_razor.g.cs
-    startLine: 84
+    path: Microsoft.CodeAnalysis.Razor.Compiler\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Components_Authentication_LogoutButton_razor.g.cs
+    startLine: 79
   assemblies:
   - WorkoutTracker
-  namespace: WorkoutTracker.Components
+  namespace: WorkoutTracker.Components.Authentication
   summary: Renders the component to the supplied <xref href="Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
@@ -79,46 +77,14 @@ items:
       type: Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder
     content.vb: Protected Overrides Sub BuildRenderTree(__builder As RenderTreeBuilder)
   overridden: Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  overload: WorkoutTracker.Components.Routes.BuildRenderTree*
-- uid: WorkoutTracker.Components.Routes.OnInitializedAsync
-  commentId: M:WorkoutTracker.Components.Routes.OnInitializedAsync
-  id: OnInitializedAsync
-  parent: WorkoutTracker.Components.Routes
-  langs:
-  - csharp
-  - vb
-  name: OnInitializedAsync()
-  nameWithType: Routes.OnInitializedAsync()
-  fullName: WorkoutTracker.Components.Routes.OnInitializedAsync()
-  type: Method
-  source:
-    id: OnInitializedAsync
-    path: Microsoft.CodeAnalysis.Razor.Compiler\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator\Components_Routes_razor.g.cs
-    startLine: 143
-  assemblies:
-  - WorkoutTracker
-  namespace: WorkoutTracker.Components
-  summary: >-
-    Initializes the component and checks the authentication state.
-
-    If the user is not on the login page and is not authenticated,
-
-    they will be redirected to the login page.
-  example: []
-  syntax:
-    content: protected override Task OnInitializedAsync()
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: Protected Overrides Function OnInitializedAsync() As Task
-  overridden: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
-  overload: WorkoutTracker.Components.Routes.OnInitializedAsync*
+  overload: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree*
 references:
-- uid: WorkoutTracker.Components
-  commentId: N:WorkoutTracker.Components
+- uid: WorkoutTracker.Components.Authentication
+  commentId: N:WorkoutTracker.Components.Authentication
   href: WorkoutTracker.html
-  name: WorkoutTracker.Components
-  nameWithType: WorkoutTracker.Components
-  fullName: WorkoutTracker.Components
+  name: WorkoutTracker.Components.Authentication
+  nameWithType: WorkoutTracker.Components.Authentication
+  fullName: WorkoutTracker.Components.Authentication
   spec.csharp:
   - uid: WorkoutTracker
     name: WorkoutTracker
@@ -127,6 +93,10 @@ references:
   - uid: WorkoutTracker.Components
     name: Components
     href: WorkoutTracker.Components.html
+  - name: .
+  - uid: WorkoutTracker.Components.Authentication
+    name: Authentication
+    href: WorkoutTracker.Components.Authentication.html
   spec.vb:
   - uid: WorkoutTracker
     name: WorkoutTracker
@@ -135,6 +105,10 @@ references:
   - uid: WorkoutTracker.Components
     name: Components
     href: WorkoutTracker.Components.html
+  - name: .
+  - uid: WorkoutTracker.Components.Authentication
+    name: Authentication
+    href: WorkoutTracker.Components.Authentication.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -154,14 +128,6 @@ references:
   name: ComponentBase
   nameWithType: ComponentBase
   fullName: Microsoft.AspNetCore.Components.ComponentBase
-- uid: Microsoft.AspNetCore.Components.LayoutComponentBase
-  commentId: T:Microsoft.AspNetCore.Components.LayoutComponentBase
-  parent: Microsoft.AspNetCore.Components
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase
-  name: LayoutComponentBase
-  nameWithType: LayoutComponentBase
-  fullName: Microsoft.AspNetCore.Components.LayoutComponentBase
 - uid: Microsoft.AspNetCore.Components.IComponent
   commentId: T:Microsoft.AspNetCore.Components.IComponent
   parent: Microsoft.AspNetCore.Components
@@ -186,44 +152,6 @@ references:
   name: IHandleAfterRender
   nameWithType: IHandleAfterRender
   fullName: Microsoft.AspNetCore.Components.IHandleAfterRender
-- uid: Microsoft.AspNetCore.Components.LayoutComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  commentId: M:Microsoft.AspNetCore.Components.LayoutComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  parent: Microsoft.AspNetCore.Components.LayoutComponentBase
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase.setparametersasync
-  name: SetParametersAsync(ParameterView)
-  nameWithType: LayoutComponentBase.SetParametersAsync(ParameterView)
-  fullName: Microsoft.AspNetCore.Components.LayoutComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  spec.csharp:
-  - uid: Microsoft.AspNetCore.Components.LayoutComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-    name: SetParametersAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase.setparametersasync
-  - name: (
-  - uid: Microsoft.AspNetCore.Components.ParameterView
-    name: ParameterView
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.parameterview
-  - name: )
-  spec.vb:
-  - uid: Microsoft.AspNetCore.Components.LayoutComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-    name: SetParametersAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase.setparametersasync
-  - name: (
-  - uid: Microsoft.AspNetCore.Components.ParameterView
-    name: ParameterView
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.parameterview
-  - name: )
-- uid: Microsoft.AspNetCore.Components.LayoutComponentBase.Body
-  commentId: P:Microsoft.AspNetCore.Components.LayoutComponentBase.Body
-  parent: Microsoft.AspNetCore.Components.LayoutComponentBase
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase.body
-  name: Body
-  nameWithType: LayoutComponentBase.Body
-  fullName: Microsoft.AspNetCore.Components.LayoutComponentBase.Body
 - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
   commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
   parent: Microsoft.AspNetCore.Components.ComponentBase
@@ -244,6 +172,28 @@ references:
     name: OnInitialized
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitialized
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
+  name: OnInitializedAsync()
+  nameWithType: ComponentBase.OnInitializedAsync()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+    name: OnInitializedAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+    name: OnInitializedAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
   - name: (
   - name: )
 - uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
@@ -506,6 +456,36 @@ references:
     name: Exception
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync
+  name: SetParametersAsync(ParameterView)
+  nameWithType: ComponentBase.SetParametersAsync(ParameterView)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+    name: SetParametersAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync
+  - name: (
+  - uid: Microsoft.AspNetCore.Components.ParameterView
+    name: ParameterView
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.parameterview
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+    name: SetParametersAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync
+  - name: (
+  - uid: Microsoft.AspNetCore.Components.ParameterView
+    name: ParameterView
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.parameterview
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -808,12 +788,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder
   - name: )
-- uid: WorkoutTracker.Components.Routes.BuildRenderTree*
-  commentId: Overload:WorkoutTracker.Components.Routes.BuildRenderTree
-  href: WorkoutTracker.Components.Routes.html#WorkoutTracker_Components_Routes_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+- uid: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree*
+  commentId: Overload:WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree
+  href: WorkoutTracker.Components.Authentication.LogoutButton.html#WorkoutTracker_Components_Authentication_LogoutButton_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
   name: BuildRenderTree
-  nameWithType: Routes.BuildRenderTree
-  fullName: WorkoutTracker.Components.Routes.BuildRenderTree
+  nameWithType: LogoutButton.BuildRenderTree
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree
 - uid: Microsoft.AspNetCore.Components.Rendering
   commentId: N:Microsoft.AspNetCore.Components.Rendering
   isExternal: true
@@ -861,76 +841,3 @@ references:
     name: Rendering
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering
-- uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
-  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
-  parent: Microsoft.AspNetCore.Components.ComponentBase
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
-  name: OnInitializedAsync()
-  nameWithType: ComponentBase.OnInitializedAsync()
-  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync()
-  spec.csharp:
-  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
-    name: OnInitializedAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
-    name: OnInitializedAsync
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
-  - name: (
-  - name: )
-- uid: WorkoutTracker.Components.Routes.OnInitializedAsync*
-  commentId: Overload:WorkoutTracker.Components.Routes.OnInitializedAsync
-  href: WorkoutTracker.Components.Routes.html#WorkoutTracker_Components_Routes_OnInitializedAsync
-  name: OnInitializedAsync
-  nameWithType: Routes.OnInitializedAsync
-  fullName: WorkoutTracker.Components.Routes.OnInitializedAsync
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

@@ -1,0 +1,18 @@
+﻿@inject SimpleAuthenticationStateProvider AuthStateProvider
+@inject NavigationManager Navigation
+@* Required to make button actually run code when clicked *@
+@rendermode InteractiveServer
+
+<button class="btn btn-primary" @onclick="Logout">Logout</button>
+
+@code {
+    /// <summary>
+    /// Logs out the current user and navigates to the login page.
+    /// </summary>
+    private async void Logout()
+    {
+        System.Diagnostics.Debug.Print("Logout Button Clicked");
+        await AuthStateProvider.Logout();
+        Navigation.NavigateTo("/login");
+    }
+}

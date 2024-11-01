@@ -17,6 +17,12 @@ items:
   assemblies:
   - WorkoutTracker
 references:
+- uid: WorkoutTracker.Components._Imports
+  commentId: T:WorkoutTracker.Components._Imports
+  href: WorkoutTracker.Components._Imports.html
+  name: _Imports
+  nameWithType: _Imports
+  fullName: WorkoutTracker.Components._Imports
 - uid: WorkoutTracker.Components.App
   commentId: T:WorkoutTracker.Components.App
   href: WorkoutTracker.Components.App.html
@@ -29,9 +35,3 @@ references:
   name: Routes
   nameWithType: Routes
   fullName: WorkoutTracker.Components.Routes
-- uid: WorkoutTracker.Components._Imports
-  commentId: T:WorkoutTracker.Components._Imports
-  href: WorkoutTracker.Components._Imports.html
-  name: _Imports
-  nameWithType: _Imports
-  fullName: WorkoutTracker.Components._Imports

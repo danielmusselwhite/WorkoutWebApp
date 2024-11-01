@@ -4,6 +4,7 @@ items:
   commentId: N:WorkoutTracker.Components.Authentication
   id: WorkoutTracker.Components.Authentication
   children:
+  - WorkoutTracker.Components.Authentication.LogoutButton
   - WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
   langs:
   - csharp
@@ -21,3 +22,9 @@ references:
   name: SimpleAuthenticationStateProvider
   nameWithType: SimpleAuthenticationStateProvider
   fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
+- uid: WorkoutTracker.Components.Authentication.LogoutButton
+  commentId: T:WorkoutTracker.Components.Authentication.LogoutButton
+  href: WorkoutTracker.Components.Authentication.LogoutButton.html
+  name: LogoutButton
+  nameWithType: LogoutButton
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton

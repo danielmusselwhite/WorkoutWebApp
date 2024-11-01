@@ -22,6 +22,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/WorkoutTracker.Components.Authentication.LogoutButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorkoutTracker.Components.Authentication.LogoutButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.yml",
       "output": {
         ".html": {
@@ -96,6 +106,26 @@
       "output": {
         ".html": {
           "relative_path": "api/WorkoutTracker.Components.Pages.Home.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorkoutTracker.Components.Pages.Login.LoginModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorkoutTracker.Components.Pages.Login.LoginModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorkoutTracker.Components.Pages.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorkoutTracker.Components.Pages.Login.html"
         }
       },
       "version": ""

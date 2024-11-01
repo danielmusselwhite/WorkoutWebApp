@@ -1,0 +1,74 @@
+﻿@page "/login"
+@*BlazorWebApp: The following line required for Interactivity eg getting the values instead of empty strings*@
+@rendermode InteractiveServer
+
+@using WorkoutTracker.Components.Authentication
+
+@inject NavigationManager Navigation
+@inject SimpleAuthenticationStateProvider AuthStateProvider
+
+<h3>Login</h3>
+<EditForm Model="@loginModel" OnValidSubmit="HandleLogin" FormName="LoginModel">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <InputText id="username" @bind-Value="loginModel.Username" placeholder="Username" />
+    </div>
+    <div>
+        <InputText id="password" @bind-Value="loginModel.Password" placeholder="Password" type="password" />
+    </div>
+    <button type="submit">Login</button>
+</EditForm>
+
+@code {
+    /// <summary>
+    /// Represents the login model containing username and password.
+    /// </summary>
+    private LoginModel loginModel = new LoginModel();
+
+    /// <summary>
+    /// Handles the login process when the form is submitted.
+    /// </summary>
+    private async Task HandleLogin()
+    {
+        // Check if model is null or not
+        if (loginModel == null || string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
+        {
+            System.Diagnostics.Debug.Print("LoginModel is null or empty!");
+            return;
+        }
+
+        // Run the login process using the authentication state provider
+        await AuthStateProvider.Login(loginModel.Username, loginModel.Password);
+
+        // Check if the login was successful
+        System.Diagnostics.Debug.Print("Checking Authentication State From Login");
+        bool loginSuccess = await AuthStateProvider.IsAuthenticated();
+        if (loginSuccess)
+        {
+            // Navigate to the home page if login is successful
+            Navigation.NavigateTo("/");
+        }
+        else
+        {
+            System.Diagnostics.Debug.Print("Login failed!");
+        }
+    }
+
+    /// <summary>
+    /// Represents the model for login containing username and password.
+    /// </summary>
+    public class LoginModel
+    {
+        /// <summary>
+        /// Gets or sets the username.
+        /// </summary>
+        public string Username { get; set; }
+
+        /// <summary>
+        /// Gets or sets the password.
+        /// </summary>
+        public string Password { get; set; }
+    }
+}

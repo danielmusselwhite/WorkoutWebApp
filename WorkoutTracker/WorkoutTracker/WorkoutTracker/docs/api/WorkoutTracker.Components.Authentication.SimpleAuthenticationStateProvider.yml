@@ -6,6 +6,7 @@ items:
   parent: WorkoutTracker.Components.Authentication
   children:
   - WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.GetAuthenticationStateAsync
+  - WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
   - WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Login(System.String,System.String)
   - WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Logout
   langs:
@@ -76,6 +77,34 @@ items:
     content.vb: Public Overrides Function GetAuthenticationStateAsync() As Task(Of AuthenticationState)
   overridden: Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider.GetAuthenticationStateAsync
   overload: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.GetAuthenticationStateAsync*
+- uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  commentId: M:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  id: IsAuthenticated
+  parent: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
+  langs:
+  - csharp
+  - vb
+  name: IsAuthenticated()
+  nameWithType: SimpleAuthenticationStateProvider.IsAuthenticated()
+  fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated()
+  type: Method
+  source:
+    remote:
+      path: WorkoutTracker/WorkoutTracker/WorkoutTracker/Components/Authentication/SimpleAuthenticationStateProvider.cs
+      branch: main
+      repo: https://github.com/danielmusselwhite/WorkoutWebApp
+    id: IsAuthenticated
+    path: ../Components/Authentication/SimpleAuthenticationStateProvider.cs
+    startLine: 22
+  assemblies:
+  - WorkoutTracker
+  namespace: WorkoutTracker.Components.Authentication
+  syntax:
+    content: public Task<bool> IsAuthenticated()
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function IsAuthenticated() As Task(Of Boolean)
+  overload: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated*
 - uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Login(System.String,System.String)
   commentId: M:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Login(System.String,System.String)
   id: Login(System.String,System.String)
@@ -94,11 +123,14 @@ items:
       repo: https://github.com/danielmusselwhite/WorkoutWebApp
     id: Login
     path: ../Components/Authentication/SimpleAuthenticationStateProvider.cs
-    startLine: 29
+    startLine: 37
   assemblies:
   - WorkoutTracker
   namespace: WorkoutTracker.Components.Authentication
-  summary: Logs in a user with the specified username and password.
+  summary: >-
+    Logs in a user with the specified username and password.
+
+    TODO - PLACEHOLDER - Replace this with a real authentication mechanism
   example: []
   syntax:
     content: public Task Login(string username, string password)
@@ -135,17 +167,14 @@ items:
       repo: https://github.com/danielmusselwhite/WorkoutWebApp
     id: Logout
     path: ../Components/Authentication/SimpleAuthenticationStateProvider.cs
-    startLine: 48
+    startLine: 61
   assemblies:
   - WorkoutTracker
   namespace: WorkoutTracker.Components.Authentication
-  summary: Logs out the current user.
-  example: []
   syntax:
     content: public Task Logout()
     return:
       type: System.Threading.Tasks.Task
-      description: A task that represents the asynchronous operation.
     content.vb: Public Function Logout() As Task
   overload: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Logout*
 references:
@@ -661,6 +690,47 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated*
+  commentId: Overload:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  href: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html#WorkoutTracker_Components_Authentication_SimpleAuthenticationStateProvider_IsAuthenticated
+  name: IsAuthenticated
+  nameWithType: SimpleAuthenticationStateProvider.IsAuthenticated
+  fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Login*
   commentId: Overload:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Login
   href: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html#WorkoutTracker_Components_Authentication_SimpleAuthenticationStateProvider_Login_System_String_System_String_

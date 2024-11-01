@@ -1,10 +1,16 @@
+using Microsoft.AspNetCore.Components.Authorization;
 using WorkoutTracker.Components;
+using WorkoutTracker.Components.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Add login services
+builder.Services.AddAuthorizationCore();
+builder.Services.AddScoped<SimpleAuthenticationStateProvider>(); // Register SimpleAuthenticationStateProvider
 
 var app = builder.Build();
 

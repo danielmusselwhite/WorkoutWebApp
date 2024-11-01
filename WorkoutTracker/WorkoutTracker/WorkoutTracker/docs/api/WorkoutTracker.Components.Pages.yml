@@ -7,6 +7,8 @@ items:
   - WorkoutTracker.Components.Pages.Counter
   - WorkoutTracker.Components.Pages.Error
   - WorkoutTracker.Components.Pages.Home
+  - WorkoutTracker.Components.Pages.Login
+  - WorkoutTracker.Components.Pages.Login.LoginModel
   - WorkoutTracker.Components.Pages.Weather
   langs:
   - csharp
@@ -30,15 +32,43 @@ references:
   name: Weather
   nameWithType: Weather
   fullName: WorkoutTracker.Components.Pages.Weather
-- uid: WorkoutTracker.Components.Pages.Counter
-  commentId: T:WorkoutTracker.Components.Pages.Counter
-  href: WorkoutTracker.Components.Pages.Counter.html
-  name: Counter
-  nameWithType: Counter
-  fullName: WorkoutTracker.Components.Pages.Counter
+- uid: WorkoutTracker.Components.Pages.Login
+  commentId: T:WorkoutTracker.Components.Pages.Login
+  href: WorkoutTracker.Components.Pages.Login.html
+  name: Login
+  nameWithType: Login
+  fullName: WorkoutTracker.Components.Pages.Login
+- uid: WorkoutTracker.Components.Pages.Login.LoginModel
+  commentId: T:WorkoutTracker.Components.Pages.Login.LoginModel
+  href: WorkoutTracker.Components.Pages.Login.html
+  name: Login.LoginModel
+  nameWithType: Login.LoginModel
+  fullName: WorkoutTracker.Components.Pages.Login.LoginModel
+  spec.csharp:
+  - uid: WorkoutTracker.Components.Pages.Login
+    name: Login
+    href: WorkoutTracker.Components.Pages.Login.html
+  - name: .
+  - uid: WorkoutTracker.Components.Pages.Login.LoginModel
+    name: LoginModel
+    href: WorkoutTracker.Components.Pages.Login.LoginModel.html
+  spec.vb:
+  - uid: WorkoutTracker.Components.Pages.Login
+    name: Login
+    href: WorkoutTracker.Components.Pages.Login.html
+  - name: .
+  - uid: WorkoutTracker.Components.Pages.Login.LoginModel
+    name: LoginModel
+    href: WorkoutTracker.Components.Pages.Login.LoginModel.html
 - uid: WorkoutTracker.Components.Pages.Error
   commentId: T:WorkoutTracker.Components.Pages.Error
   href: WorkoutTracker.Components.Pages.Error.html
   name: Error
   nameWithType: Error
   fullName: WorkoutTracker.Components.Pages.Error
+- uid: WorkoutTracker.Components.Pages.Counter
+  commentId: T:WorkoutTracker.Components.Pages.Counter
+  href: WorkoutTracker.Components.Pages.Counter.html
+  name: Counter
+  nameWithType: Counter
+  fullName: WorkoutTracker.Components.Pages.Counter

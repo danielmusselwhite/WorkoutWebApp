@@ -32,6 +32,25 @@ references:
   commentId: N:WorkoutTracker.Components.Authentication
   fullName: WorkoutTracker.Components.Authentication
   nameWithType: WorkoutTracker.Components.Authentication
+- uid: WorkoutTracker.Components.Authentication.LogoutButton
+  name: LogoutButton
+  href: api/WorkoutTracker.Components.Authentication.LogoutButton.html
+  commentId: T:WorkoutTracker.Components.Authentication.LogoutButton
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton
+  nameWithType: LogoutButton
+- uid: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/WorkoutTracker.Components.Authentication.LogoutButton.html#WorkoutTracker_Components_Authentication_LogoutButton_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: LogoutButton.BuildRenderTree(RenderTreeBuilder)
+- uid: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/WorkoutTracker.Components.Authentication.LogoutButton.html#WorkoutTracker_Components_Authentication_LogoutButton_BuildRenderTree_
+  commentId: Overload:WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree
+  isSpec: "True"
+  fullName: WorkoutTracker.Components.Authentication.LogoutButton.BuildRenderTree
+  nameWithType: LogoutButton.BuildRenderTree
 - uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
   name: SimpleAuthenticationStateProvider
   href: api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html
@@ -51,6 +70,19 @@ references:
   isSpec: "True"
   fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.GetAuthenticationStateAsync
   nameWithType: SimpleAuthenticationStateProvider.GetAuthenticationStateAsync
+- uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  name: IsAuthenticated()
+  href: api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html#WorkoutTracker_Components_Authentication_SimpleAuthenticationStateProvider_IsAuthenticated
+  commentId: M:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated()
+  nameWithType: SimpleAuthenticationStateProvider.IsAuthenticated()
+- uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated*
+  name: IsAuthenticated
+  href: api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html#WorkoutTracker_Components_Authentication_SimpleAuthenticationStateProvider_IsAuthenticated_
+  commentId: Overload:WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  isSpec: "True"
+  fullName: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.IsAuthenticated
+  nameWithType: SimpleAuthenticationStateProvider.IsAuthenticated
 - uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.Login(System.String,System.String)
   name: Login(string, string)
   href: api/WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider.html#WorkoutTracker_Components_Authentication_SimpleAuthenticationStateProvider_Login_System_String_System_String_
@@ -200,6 +232,57 @@ references:
   isSpec: "True"
   fullName: WorkoutTracker.Components.Pages.Home.BuildRenderTree
   nameWithType: Home.BuildRenderTree
+- uid: WorkoutTracker.Components.Pages.Login
+  name: Login
+  href: api/WorkoutTracker.Components.Pages.Login.html
+  commentId: T:WorkoutTracker.Components.Pages.Login
+  fullName: WorkoutTracker.Components.Pages.Login
+  nameWithType: Login
+- uid: WorkoutTracker.Components.Pages.Login.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/WorkoutTracker.Components.Pages.Login.html#WorkoutTracker_Components_Pages_Login_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:WorkoutTracker.Components.Pages.Login.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: WorkoutTracker.Components.Pages.Login.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: Login.BuildRenderTree(RenderTreeBuilder)
+- uid: WorkoutTracker.Components.Pages.Login.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/WorkoutTracker.Components.Pages.Login.html#WorkoutTracker_Components_Pages_Login_BuildRenderTree_
+  commentId: Overload:WorkoutTracker.Components.Pages.Login.BuildRenderTree
+  isSpec: "True"
+  fullName: WorkoutTracker.Components.Pages.Login.BuildRenderTree
+  nameWithType: Login.BuildRenderTree
+- uid: WorkoutTracker.Components.Pages.Login.LoginModel
+  name: Login.LoginModel
+  href: api/WorkoutTracker.Components.Pages.Login.LoginModel.html
+  commentId: T:WorkoutTracker.Components.Pages.Login.LoginModel
+  fullName: WorkoutTracker.Components.Pages.Login.LoginModel
+  nameWithType: Login.LoginModel
+- uid: WorkoutTracker.Components.Pages.Login.LoginModel.Password
+  name: Password
+  href: api/WorkoutTracker.Components.Pages.Login.LoginModel.html#WorkoutTracker_Components_Pages_Login_LoginModel_Password
+  commentId: P:WorkoutTracker.Components.Pages.Login.LoginModel.Password
+  fullName: WorkoutTracker.Components.Pages.Login.LoginModel.Password
+  nameWithType: Login.LoginModel.Password
+- uid: WorkoutTracker.Components.Pages.Login.LoginModel.Password*
+  name: Password
+  href: api/WorkoutTracker.Components.Pages.Login.LoginModel.html#WorkoutTracker_Components_Pages_Login_LoginModel_Password_
+  commentId: Overload:WorkoutTracker.Components.Pages.Login.LoginModel.Password
+  isSpec: "True"
+  fullName: WorkoutTracker.Components.Pages.Login.LoginModel.Password
+  nameWithType: Login.LoginModel.Password
+- uid: WorkoutTracker.Components.Pages.Login.LoginModel.Username
+  name: Username
+  href: api/WorkoutTracker.Components.Pages.Login.LoginModel.html#WorkoutTracker_Components_Pages_Login_LoginModel_Username
+  commentId: P:WorkoutTracker.Components.Pages.Login.LoginModel.Username
+  fullName: WorkoutTracker.Components.Pages.Login.LoginModel.Username
+  nameWithType: Login.LoginModel.Username
+- uid: WorkoutTracker.Components.Pages.Login.LoginModel.Username*
+  name: Username
+  href: api/WorkoutTracker.Components.Pages.Login.LoginModel.html#WorkoutTracker_Components_Pages_Login_LoginModel_Username_
+  commentId: Overload:WorkoutTracker.Components.Pages.Login.LoginModel.Username
+  isSpec: "True"
+  fullName: WorkoutTracker.Components.Pages.Login.LoginModel.Username
+  nameWithType: Login.LoginModel.Username
 - uid: WorkoutTracker.Components.Pages.Weather
   name: Weather
   href: api/WorkoutTracker.Components.Pages.Weather.html
@@ -251,6 +334,19 @@ references:
   isSpec: "True"
   fullName: WorkoutTracker.Components.Routes.BuildRenderTree
   nameWithType: Routes.BuildRenderTree
+- uid: WorkoutTracker.Components.Routes.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/WorkoutTracker.Components.Routes.html#WorkoutTracker_Components_Routes_OnInitializedAsync
+  commentId: M:WorkoutTracker.Components.Routes.OnInitializedAsync
+  fullName: WorkoutTracker.Components.Routes.OnInitializedAsync()
+  nameWithType: Routes.OnInitializedAsync()
+- uid: WorkoutTracker.Components.Routes.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/WorkoutTracker.Components.Routes.html#WorkoutTracker_Components_Routes_OnInitializedAsync_
+  commentId: Overload:WorkoutTracker.Components.Routes.OnInitializedAsync
+  isSpec: "True"
+  fullName: WorkoutTracker.Components.Routes.OnInitializedAsync
+  nameWithType: Routes.OnInitializedAsync
 - uid: WorkoutTracker.Components._Imports
   name: _Imports
   href: api/WorkoutTracker.Components._Imports.html

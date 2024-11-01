@@ -12,6 +12,8 @@ items:
 - uid: WorkoutTracker.Components.Authentication
   name: WorkoutTracker.Components.Authentication
   items:
+  - uid: WorkoutTracker.Components.Authentication.LogoutButton
+    name: LogoutButton
   - uid: WorkoutTracker.Components.Authentication.SimpleAuthenticationStateProvider
     name: SimpleAuthenticationStateProvider
 - uid: WorkoutTracker.Components.Layout
@@ -30,6 +32,10 @@ items:
     name: Error
   - uid: WorkoutTracker.Components.Pages.Home
     name: Home
+  - uid: WorkoutTracker.Components.Pages.Login
+    name: Login
+  - uid: WorkoutTracker.Components.Pages.Login.LoginModel
+    name: Login.LoginModel
   - uid: WorkoutTracker.Components.Pages.Weather
     name: Weather
 memberLayout: SamePage

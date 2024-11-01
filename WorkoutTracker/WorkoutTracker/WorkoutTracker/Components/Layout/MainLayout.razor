@@ -1,23 +1,48 @@
-﻿@inherits LayoutComponentBase
+﻿@using WorkoutTracker.Components.Authentication
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject SimpleAuthenticationStateProvider AuthStateProvider
 
+<!-- Main layout component for the application -->
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+    <!-- Only show if user is not on the login page-->
+    @if (!Navigation.Uri.Contains("login"))
+    {
+        <div class="sidebar">
+            <!-- Navigation menu component -->
+            <NavMenu />
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+        <main>
+            <div class="top-row px-4">
+                <!-- Link to ASP.NET Core documentation -->
+                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+                <!-- Logout button to trigger user logout -->
+                <LogoutButton />
+            </div>
+
+            <article class="content px-4">
+                <!-- Placeholder for the body content of the page -->
+                @Body
+            </article>
+        </main>
+    }
+    else
+    {
+        <main>
+            <article class="content px-4">
+                <!-- Placeholder for the body content of the page -->
+                @Body
+            </article>
+        </main>
+    }
+
 </div>
 
 <div id="blazor-error-ui">
+    <!-- Error UI for unhandled exceptions -->
     An unhandled error has occurred.
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
