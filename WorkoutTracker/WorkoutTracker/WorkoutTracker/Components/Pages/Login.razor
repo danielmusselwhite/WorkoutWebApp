@@ -21,6 +21,13 @@
     <button type="submit">Login</button>
 </EditForm>
 
+@if (loginFailed)
+{
+    <div class="alert alert-danger" role="alert">
+        Incorrect username or password. Please try again.
+    </div>
+}
+
 @code {
     /// <summary>
     /// Represents the login model containing username and password.
@@ -28,14 +35,24 @@
     private LoginModel loginModel = new LoginModel();
 
     /// <summary>
+    /// Indicates whether the login attempt failed.
+    /// </summary>
+    private bool loginFailed = false;
+
+    /// <summary>
     /// Handles the login process when the form is submitted.
     /// </summary>
     private async Task HandleLogin()
     {
+        // reset loginFailed
+        loginFailed = false;
+
         // Check if model is null or not
         if (loginModel == null || string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
         {
             System.Diagnostics.Debug.Print("LoginModel is null or empty!");
+            await Task.Delay(100); // Adding a slight delay
+            loginFailed = true;
             return;
         }
 
@@ -53,6 +70,8 @@
         else
         {
             System.Diagnostics.Debug.Print("Login failed!");
+            await Task.Delay(100); // Adding a slight delay
+            loginFailed = true;
         }
     }
 
