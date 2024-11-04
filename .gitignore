@@ -102,3 +102,8 @@ TestResults/
 
 # Ignore secrets.json for local dev secrets
 **/secrets.json
+
+# Ignore the automatically generated docfx
+WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/_site/*
+WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/api/*
+WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/autodocs/*
