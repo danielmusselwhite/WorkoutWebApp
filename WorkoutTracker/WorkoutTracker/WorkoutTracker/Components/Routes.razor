@@ -39,6 +39,14 @@
     }
 }
 
+@* 
+///<summary>
+/// Configures the router for the application.
+/// </summary>
+/// <remarks>
+/// This router uses the application's assembly to find routes and sets the default layout to MainLayout.
+/// It also focuses on the first <h1> element when navigating to a new route.
+/// </remarks>*@
 <Router AppAssembly="typeof(Program).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />

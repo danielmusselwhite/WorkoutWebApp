@@ -15,6 +15,45 @@
 
 ![Class Diagram](./docs/images/WorkOuts.drawio.png)
 
+#### Core App Components
+
+##### App.Razor
+
+App.razor serves as the root component in a Blazor application. It’s the entry point where routing is configured and where other components are referenced.
+Essentially it contains a reference to `<Routes>` which is a component that is responsible for routing in Blazor.
+
+##### Routes.razor
+
+Routes.razor is a component that is responsible for routing in Blazor. It contains a list of `<RouteView>` components that are used to render the appropriate component based on the current route.
+It also checks the auth state so that only authenticated users can access certain pages.
+
+##### MainLayout.razor
+
+MainLayout.razor is a component that defines the layout of the application. It contains a header and a body. The body is where the main content of the application is rendered.
+Routes.razor applies this layout to all the pages in the application.
+
+#### Login Components
+
+##### Login.razor
+
+Login.razor is a component that is responsible for logging in a user. It contains a form that takes in a username and password and sends a POST request to the server to authenticate the user.
+
+##### LogoutButton.razor
+
+LogoutButton.razor is a component that is responsible for logging out a user. It contains a button that sends a POST request to the server to log out the user.
+It is included in the mainlayout so that it is accessible from all pages.
+
+##### SimpleStateAuthenticationProvider.cs
+
+SimpleStateAuthenticationProvider.cs is a class that is responsible for managing the authentication state of the user. It contains methods to log in and log out a user and to check if a user is authenticated.
+
+#### Main Components
+
+##### Home
+
+TODO
+
+
 ### User Story
 
 #### Previous Workouts
