@@ -107,3 +107,6 @@ TestResults/
 WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/_site/*
 WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/api/*
 WorkoutTracker/WorkoutTracker/WorkoutTracker/docs/autodocs/*
+
+# Ignore the generated Sql server exe
+docs/images/SQL2022-SSEI-Dev.exe
