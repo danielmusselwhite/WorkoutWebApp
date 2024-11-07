@@ -4,38 +4,22 @@
 
 <!-- Main layout component for the application -->
 <div class="page">
-    <!-- Only show if user is not on the login page-->
-    @if (!Navigation.Uri.Contains("login"))
-    {
-        <div class="sidebar">
-            <!-- Navigation menu component -->
-            <NavMenu />
+    <div class="sidebar">
+        <!-- Navigation menu component -->
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <!-- Link to ASP.NET Core documentation -->
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
-        <main>
-            <div class="top-row px-4">
-                <!-- Link to ASP.NET Core documentation -->
-                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-                <!-- Logout button to trigger user logout -->
-                <LogoutButton />
-            </div>
-
-            <article class="content px-4">
-                <!-- Placeholder for the body content of the page -->
-                @Body
-            </article>
-        </main>
-    }
-    else
-    {
-        <main>
-            <article class="content px-4">
-                <!-- Placeholder for the body content of the page -->
-                @Body
-            </article>
-        </main>
-    }
-
+        <article class="content px-4">
+            <!-- Placeholder for the body content of the page -->
+            @Body
+        </article>
+    </main>
 </div>
 
 <div id="blazor-error-ui">

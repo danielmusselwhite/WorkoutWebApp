@@ -99,3 +99,8 @@ TODO
     1.  Clicks on the Save button if they want to save the workout
     2.  Clicks on the Cancel button if they want to discard the workout
 12. User is taken back to the main page
+
+
+#### Explanation of how to modify the DB's
+
+https://blazorhelpwebsite.com/ViewBlogPost/34

@@ -1,7 +1,25 @@
 ﻿@page "/"
+@inject Services.UserService UserService
+@inject NavigationManager Navigation
+@inject Authentication.SimpleAuthenticationStateProvider AuthStateProvider
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Hello, @Username</h1>
 
-Welcome to your new app.
+<p>Welcome to your workout app!</p>
+
+@code {
+    private string Username = "Loading...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Assuming you have a way to get the current user's ID (e.g., via authentication)
+        var userId = AuthStateProvider.GetCurrentUserId();
+        if (userId != null){
+            Username = await UserService.GetUserNameAsync(userId ?? -1); // if userId is null use -1, will never happen though because of the if, just to satisfy the compiler
+            Username = char.ToUpper(Username[0]) + Username.Substring(1); // make first letter of username uppercase
+        }
+        
+    }
+}

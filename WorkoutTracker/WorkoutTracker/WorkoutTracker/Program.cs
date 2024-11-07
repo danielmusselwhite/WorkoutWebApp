@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using WorkoutTracker.Components;
 using WorkoutTracker.Components.Authentication;
+using WorkoutTracker.Components.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,11 @@ builder.Services.AddRazorComponents()
 // Add login services
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<SimpleAuthenticationStateProvider>(); // Register SimpleAuthenticationStateProvider
+
+// Register the UserService (for getting info from Users DB Table( with the correct connection string from appsettings.json
+builder.Services.AddSingleton<UserService>(sp =>
+    new UserService(builder.Configuration.GetConnectionString("ConnectionWorkoutTrackerDB"))
+);
 
 var app = builder.Build();
 

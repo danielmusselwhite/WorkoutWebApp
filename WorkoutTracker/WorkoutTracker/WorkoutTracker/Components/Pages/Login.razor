@@ -7,87 +7,107 @@
 @inject NavigationManager Navigation
 @inject SimpleAuthenticationStateProvider AuthStateProvider
 
-<h3>Login</h3>
-<EditForm Model="@loginModel" OnValidSubmit="HandleLogin" FormName="LoginModel">
+<h3>@(isRegistering ? "Register" : "Login")</h3>
+
+<EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
     <DataAnnotationsValidator />
     <ValidationSummary />
 
     <div>
         <InputText id="username" @bind-Value="loginModel.Username" placeholder="Username" />
     </div>
+
     <div>
         <InputText id="password" @bind-Value="loginModel.Password" placeholder="Password" type="password" />
     </div>
-    <button type="submit">Login</button>
+
+    <button type="submit">@((isRegistering ? "Register" : "Login"))</button>
 </EditForm>
 
-@if (loginFailed)
+@if (feedbackMessage != null)
 {
-    <div class="alert alert-danger" role="alert">
-        Incorrect username or password. Please try again.
+    <div class="alert @feedbackClass" role="alert">
+        @feedbackMessage
     </div>
 }
 
+<button @onclick="ToggleRegisterMode">@((isRegistering ? "Switch to Login" : "Switch to Register"))</button>
+
 @code {
-    /// <summary>
-    /// Represents the login model containing username and password.
-    /// </summary>
     private LoginModel loginModel = new LoginModel();
+    private bool isRegistering = false;  // Track if we are in Register mode or not.
+    private string feedbackMessage;
+    private string feedbackClass;
 
-    /// <summary>
-    /// Indicates whether the login attempt failed.
-    /// </summary>
-    private bool loginFailed = false;
-
-    /// <summary>
-    /// Handles the login process when the form is submitted.
-    /// </summary>
     private async Task HandleLogin()
     {
-        // reset loginFailed
-        loginFailed = false;
+        // reset feedback message
+        feedbackMessage = null;
+        feedbackClass = null;
 
-        // Check if model is null or not
-        if (loginModel == null || string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
+        if (isRegistering)
         {
-            System.Diagnostics.Debug.Print("LoginModel is null or empty!");
-            await Task.Delay(100); // Adding a slight delay
-            loginFailed = true;
-            return;
-        }
-
-        // Run the login process using the authentication state provider
-        await AuthStateProvider.Login(loginModel.Username, loginModel.Password);
-
-        // Check if the login was successful
-        System.Diagnostics.Debug.Print("Checking Authentication State From Login");
-        bool loginSuccess = await AuthStateProvider.IsAuthenticated();
-        if (loginSuccess)
-        {
-            // Navigate to the home page if login is successful
-            Navigation.NavigateTo("/");
+            // Register the user
+            System.Diagnostics.Debug.WriteLine("Registering user");
+            await HandleRegister();
         }
         else
         {
-            System.Diagnostics.Debug.Print("Login failed!");
-            await Task.Delay(100); // Adding a slight delay
-            loginFailed = true;
+            // Perform login logic
+            System.Diagnostics.Debug.Print("Checking Authentication State From Login");
+            bool success = await AuthStateProvider.Login(loginModel.Username, loginModel.Password);
+            if (success)
+            {
+                System.Diagnostics.Debug.WriteLine("Login successful");
+                Navigation.NavigateTo("/");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Login failed");
+                await Task.Delay(100); // Delay to prevent immediate feedback message change
+                feedbackMessage = "Login failed. Please check your credentials.";
+                feedbackClass = "alert-danger";
+            }
         }
     }
 
-    /// <summary>
-    /// Represents the model for login containing username and password.
-    /// </summary>
+    private async Task HandleRegister()
+    {
+        // reset feedback message
+        feedbackMessage = null;
+        feedbackClass = null;
+
+        bool success = await AuthStateProvider.Register(loginModel.Username, loginModel.Password);
+
+        if (success)
+        {
+            System.Diagnostics.Debug.WriteLine("Registration successful");
+            feedbackMessage = "Account created successfully!";
+            feedbackClass = "alert-success";
+        }
+        else
+        {
+            System.Diagnostics.Debug.WriteLine("Registration failed");
+            feedbackMessage = "Username already exists. Please choose a different one.";
+            feedbackClass = "alert-warning";
+        }
+    }
+
+    private void ToggleRegisterMode()
+    {
+        // reset feedback message
+        feedbackMessage = null;
+        feedbackClass = null;
+
+        // Toggle between Register and Login modes
+        System.Diagnostics.Debug.WriteLine("Toggling register mode");
+        isRegistering = !isRegistering;
+        feedbackMessage = null; // Reset feedback message when switching modes.
+    }
+
     public class LoginModel
     {
-        /// <summary>
-        /// Gets or sets the username.
-        /// </summary>
         public string Username { get; set; }
-
-        /// <summary>
-        /// Gets or sets the password.
-        /// </summary>
         public string Password { get; set; }
     }
 }
