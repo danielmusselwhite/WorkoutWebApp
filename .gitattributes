@@ -2,4 +2,4 @@
 * linguist-vendored
 
 # Include only files in the components directory where my src is, so generated code (eg HTML autodocs, build files, etc.) aren't counted by the linguist
-WorkoutTracker/WorkoutTracker/WorkoutTracker/Components/** linguist-vendored=false
+WorkoutTracker/WorkoutTracker/WorkoutTracker/Components/**/* linguist-vendored=false
