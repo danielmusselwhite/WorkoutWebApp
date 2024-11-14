@@ -1,0 +1,56 @@
+﻿@using WorkoutTracker.Components.Exercises
+
+<div class="exercise">
+    <h2>@exerciseName</h2>
+    <p>@targetMuscles</p>
+
+    <!-- Table with variable number of rows, based on how many sets we have-->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Set</th>
+                <th>Reps</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var set in sets)
+            {
+                <tr>
+                    <td>@set.SetNumber</td>
+                    <td>@set.Reps</td>
+                    <td>@set.Weight</td>
+                </tr>
+            }
+            <!-- Bottom row has a button to add exercise -->
+            <tr>
+                <td colspan="3">
+                    <button class="btn btn-primary">Add Set</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+@code {
+
+    [Parameter]
+    public string exerciseName { get; set; } = string.Empty; // This is a parameter that can be set from the parent component
+    [Parameter]
+    public string targetMuscles { get; set; } = string.Empty; // This is a parameter that can be set from the parent component
+    
+    // This exercises private sets array
+    private ExerciseSet[] sets = new ExerciseSet[0];
+
+    // public method to save these sets to the sql database, taking argument of the foreign key exerciseID
+    public void SaveSet(int exerciseID)
+    {
+        // Save each set to the database
+        foreach (var set in sets)
+        {
+            // Save set to database
+            System.Diagnostics.Debug.WriteLine("Saving set to database: " + set.Reps + " reps at " + set.Weight + " lbs. for exercise " + exerciseID);
+        }
+    }
+}
