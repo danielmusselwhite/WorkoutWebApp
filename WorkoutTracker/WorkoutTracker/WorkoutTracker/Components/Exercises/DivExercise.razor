@@ -1,56 +1,88 @@
 ﻿@using WorkoutTracker.Components.Exercises
 
-<div class="exercise">
-    <h2>@exerciseName</h2>
-    <p>@targetMuscles</p>
+<div class="wrapper">
+    <div class="exerciseDiv">
 
-    <!-- Table with variable number of rows, based on how many sets we have-->
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Set</th>
-                <th>Reps</th>
-                <th>Weight</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var set in sets)
-            {
+
+        <h2><input type="text" placeholder="Exercise Name" class="form-control" @bind="exerciseName" /></h2>
+
+        <input type="text" placeholder="Target Muscles" class="form-control" @bind="targetMuscles" />
+
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@set.SetNumber</td>
-                    <td>@set.Reps</td>
-                    <td>@set.Weight</td>
+                    <th>Set</th>
+                    <th>Reps</th>
+                    <th>Weight (Kg)</th>
+                    <th>Delete</th>
                 </tr>
-            }
-            <!-- Bottom row has a button to add exercise -->
-            <tr>
-                <td colspan="3">
-                    <button class="btn btn-primary">Add Set</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var set in sets.Select((value, index) => new { value, index }))
+                {
+                    <tr @key="set.value">
+                        <td>@(set.index + 1)</td> <!-- Display the set number as its position in the array -->
+                        <td>
+                            <input type="number" placeholder="Reps" class="form-control" @bind="sets[set.index].Reps" />
+                        </td>
+                        <td>
+                            <input type="number" placeholder="Weight" class="form-control" @bind="sets[set.index].Weight" />
+                        </td>
+                        <td>
+                            <button class="btn btn-del" @onclick="() => DeleteSet(set.index)">Delete Set</button> <!-- TODO - move styles to style sheet -->
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="4">
+                        <button class="btn btn-add" @onclick="AddSet">Add Set</button> <!-- TODO - move styles to style sheet -->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button class="btn btn-save" @onclick="SaveExercise">Save Set</button> <!-- TODO - delete, SaveExercise will be called for each exercise when SaveWorkout is clicked -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-
 @code {
-
     [Parameter]
-    public string exerciseName { get; set; } = string.Empty; // This is a parameter that can be set from the parent component
+    public string exerciseName { get; set; } = string.Empty;
     [Parameter]
-    public string targetMuscles { get; set; } = string.Empty; // This is a parameter that can be set from the parent component
-    
-    // This exercises private sets array
-    private ExerciseSet[] sets = new ExerciseSet[0];
+    public string targetMuscles { get; set; } = string.Empty;
 
-    // public method to save these sets to the sql database, taking argument of the foreign key exerciseID
-    public void SaveSet(int exerciseID)
+    private List<ExerciseSet> sets = new List<ExerciseSet>();
+
+    private void AddSet()
     {
-        // Save each set to the database
+        sets.Add(new ExerciseSet { Reps = 0, Weight = 0 });
+        StateHasChanged(); // Ensure UI re-renders to update bindings
+    }
+
+    private void DeleteSet(int index)
+    {
+        sets.RemoveAt(index);
+    }
+
+    public void SaveExercise()
+    {
+        int workoutID = 1;
+        System.Diagnostics.Debug.WriteLine("Saving exercise: " + exerciseName + " for workoutID " + workoutID + " focusing on "+targetMuscles);
+        int exerciseID = 1;
+
+        // Now we manually access the values from sets and log them
         foreach (var set in sets)
         {
-            // Save set to database
-            System.Diagnostics.Debug.WriteLine("Saving set to database: " + set.Reps + " reps at " + set.Weight + " lbs. for exercise " + exerciseID);
+            System.Diagnostics.Debug.WriteLine("Saving set: " + set.Reps + " reps at " + set.Weight + " kg for exercise " + exerciseID);
         }
+    }
+
+    public class ExerciseSet
+    {
+        public int Reps { get; set; }
+        public double Weight { get; set; }
     }
 }

@@ -1,0 +1,24 @@
+﻿.wrapper {
+    margin: 12px; /* Adds 12px spacing around the .exerciseDiv */
+}
+
+.exercise-container {
+    background-color: #e0f7fa;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #b3e5fc;
+}
+
+.btn-add {
+    background-color: lime;
+}
+
+.btn-del {
+    background-color: red;
+    float: right;
+    margin:4px;
+}

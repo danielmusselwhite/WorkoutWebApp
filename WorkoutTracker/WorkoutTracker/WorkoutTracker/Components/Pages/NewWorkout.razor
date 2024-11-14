@@ -6,22 +6,41 @@
 
 <h1>NewWorkout</h1>
 
-<p role="status">Current count: @currentCount</p>
+@foreach (var divExercise in exercises.Select((value, index) => new { value, index }))
+{
+    <div class="wrapper" @key="divExercise.index">
+        <div class="exercise-container">
+            <table style="width:100%">
+                <tr>
+                    <td><h4>Exercise @(divExercise.index + 1)</h4></td>
+                    <td><button class="btn btn-del" @onclick="() => DeleteExercise(divExercise.index)">Delete</button></td>
+                </tr>
+            </table>
+            
+            <DivExercise />
+        </div>
+    </div>
+}
 
-<DivExercise exerciseName="@exerciseName" />
 
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-
-
-
+<button class="btn btn-add" @onclick="AddExercise">Add Exercise</button> <!-- TODO - move styles to style sheet -->
 @code {
-    private int currentCount = 0;
-    private string exerciseName = "Test";
 
-    private void IncrementCount()
+    private List<DivExercise> exercises = new List<DivExercise>();
+
+    private void AddExercise()
     {
-        currentCount++;
+        exercises.Add(new DivExercise { exerciseName = "", targetMuscles = "" });
+        StateHasChanged(); // Ensure UI re-renders to update bindings
+    }
+
+    private void DeleteExercise(int index) // TODO - fix the delet always deleting last item
+    {
+        System.Diagnostics.Debug.WriteLine("Index is: " + index);
+        if (index >= 0 && index < exercises.Count)
+        {
+            exercises.RemoveAt(index);
+            StateHasChanged(); // Re-render the UI to reflect the change
+        }
     }
 }
